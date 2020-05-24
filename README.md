@@ -18,6 +18,14 @@ This project implements an application for displaying information about locales.
   - (Compulsory) All information about a locale can be displayed on screen
   - (Compulsory) A loop of reading commands is implemented and all messages are configurable
   - (Optional) Also I have a .properties file for the commands and i use them in order to configure the commands names
+  
+ ```
+  String baseName = "res.Commands";
+  messages = ResourceBundle.getBundle(baseName, Locale.getDefault());
+  getCommand = messages.getString("info-locale.command");
+  setCommand = messages.getString("set-locale.command");
+  exitCommand = messages.getString("info-locale.exit");
+ ```
 ## Not resolved
 
   - (Optional) Calling an external API to display additional information about a country
